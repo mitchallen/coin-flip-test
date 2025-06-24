@@ -1,5 +1,6 @@
-# coin-flip-test
+coin-flip-test
 ==
+An example of how to use a public npm package hosted on GitHub.
 
 ## Usage (with Makefile)
 
