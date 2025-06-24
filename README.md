@@ -22,5 +22,27 @@ This project uses the [`@mitchallen/coin-flip`](https://github.com/users/mitchal
 
 ---
 
+## Using a Personal Access Token (PAT) in .npmrc and Workflows
+
+To automate installs or use this package in CI/CD, you can add your GitHub PAT to your `.npmrc` file:
+
+```
+//npm.pkg.github.com/:_authToken=YOUR_GITHUB_PAT
+```
+
+**Security tip:** Never commit your `.npmrc` with a real token to version control. Use environment variables or CI/CD secrets for automation.
+
+### Example: GitHub Actions Workflow
+
+```yaml
+- name: Set up .npmrc for GitHub Packages
+  run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
+
+- name: Install dependencies
+  run: npm install
+```
+
+Replace `secrets.GITHUB_TOKEN` with your own secret if using a custom PAT.
+
 
 
