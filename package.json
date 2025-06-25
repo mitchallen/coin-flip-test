@@ -1,14 +1,17 @@
 {
   "name": "coin-flip-test",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
+  "main": "dist/index.js",
+  "description": "An example of how to use a public npm package hosted on GitHub.",
+  "keywords": ["typescript", "node", "coin-flip", "github-packages", "example"],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "devDependencies": {
     "@types/node": "^24.0.3",
     "ts-node": "^10.9.2",
