@@ -1,6 +1,7 @@
 {
   "name": "coin-flip-test",
   "version": "1.0.0",
+  "private": true,
   "main": "dist/index.js",
   "description": "An example of how to use a public npm package hosted on GitHub.",
   "keywords": ["typescript", "node", "coin-flip", "github-packages", "example"],
